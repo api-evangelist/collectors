@@ -1,0 +1,23 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for PSA Public API
+  version: 1.0.0
+extends: openapi/collectors-psa-openapi-original.json
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: collectors
+      x-apievangelist-brand: PSA
+      x-apievangelist-auth: bearer-token (apiKey Authorization header)
+      x-apievangelist-base-url: https://api.psacard.com/publicapi
+      x-apievangelist-read-only: true
+      x-apievangelist-error-envelope: "{ IsValidRequest, ServerMessage }"
+  - target: $.paths['/cert/GetByCertNumber/{certNumber}'].get
+    update:
+      x-apievangelist-summary: Look up a graded PSA certificate by its cert number.
+  - target: $.paths['/order/GetProgress/{orderNumber}'].get
+    update:
+      x-apievangelist-summary: Track the grading progress of a submitted order.
+  - target: $.paths['/pop/GetPSASpecPopulation/{specID}'].get
+    update:
+      x-apievangelist-summary: Retrieve the PSA population report for a spec.

@@ -1,0 +1,30 @@
+# Collectors
+
+> Collectors is the parent company behind PSA, PCGS, Beckett, SGC, Card Ladder and Collectors financial/vault services — the infrastructure powering trust, grading, authentication and marketplace/vault services for trading cards, coins, currency and memorabilia. PSA exposes a public developer API for certificate verification, order/submission tracking and population reports.
+
+## APIs
+
+- [PSA Public API](https://www.psacard.com/publicapi/documentation): Verify PSA certificates, track grading orders/submissions, and read population reports. Bearer-token (apiKey) auth. Base URL https://api.psacard.com/publicapi
+
+## Specs
+
+- [PSA Public API (Swagger 2.0)](https://api.psacard.com/publicapi/swagger.json): Machine-readable OpenAPI/Swagger definition.
+- [OpenAPI (harvested)](https://raw.githubusercontent.com/api-evangelist/collectors/refs/heads/main/openapi/collectors-psa-openapi-original.json)
+
+## Docs
+
+- [PSA Public API documentation](https://www.psacard.com/publicapi/documentation)
+- [Swagger UI](https://api.psacard.com/publicapi/swagger)
+- [Register for API access](https://www.psacard.com/publicapi)
+- [Collectors tech blog](https://blog.collectors.com)
+- [Terms of Service](https://app.collectors.com/collectorsuseragreement)
+- [Privacy Policy](https://app.collectors.com/privacypolicy)
+
+## Artifacts
+
+- [Authentication profile](https://raw.githubusercontent.com/api-evangelist/collectors/refs/heads/main/authentication/collectors-authentication.yml)
+- [Conventions](https://raw.githubusercontent.com/api-evangelist/collectors/refs/heads/main/conventions/collectors-conventions.yml)
+- [Error catalog](https://raw.githubusercontent.com/api-evangelist/collectors/refs/heads/main/errors/collectors-problem-types.yml)
+- [Data model](https://raw.githubusercontent.com/api-evangelist/collectors/refs/heads/main/data-model/collectors-data-model.yml)
+- [MCP (candidate)](https://raw.githubusercontent.com/api-evangelist/collectors/refs/heads/main/mcp/collectors-mcp.yml)
+- [Agent skills](https://raw.githubusercontent.com/api-evangelist/collectors/refs/heads/main/skills/_index.yml)

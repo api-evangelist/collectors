@@ -1,0 +1,14 @@
+{
+  "repo": "collectors",
+  "feeds": [
+    {
+      "source": "https://www.psacard.com/publicapi",
+      "feed_url": "https://www.psacard.com/publicapi",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-20T13:31:34Z"
+}

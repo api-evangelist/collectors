@@ -1,0 +1,14 @@
+{
+  "provider": "collectors",
+  "sources": [
+    "collectors-psa-public-api-methods-api-openapi.yml"
+  ],
+  "outputs": [
+    "collectors-psa-public-api-methods-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

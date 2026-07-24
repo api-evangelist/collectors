@@ -1,0 +1,15 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/collectors-psa-openapi-original.json
+versioning:
+  scheme: single-version
+  current: v1
+  docs: https://www.psacard.com/publicapi/documentation
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No deprecation or Sunset/Deprecation (RFC 8594) policy is documented.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []

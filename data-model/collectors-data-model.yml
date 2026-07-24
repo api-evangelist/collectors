@@ -1,0 +1,63 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/collectors-psa-openapi-original.json
+entities:
+  - name: PublicCertificationModel
+    description: Envelope returned by a cert lookup; wraps a card cert and/or a DNA (autograph/memorabilia) cert.
+  - name: PublicPSACert
+    description: A graded PSA card certificate (grade, spec, population, subject).
+    key: CertNumber
+  - name: PublicDNACert
+    description: A PSA/DNA authenticated autograph or memorabilia certificate.
+    key: CertNumber
+  - name: SubjectDetail
+    description: A named subject (signer) on a DNA cert.
+  - name: CertFileAppendModel
+    description: File-append form of a cert record (cert + population + DNA sub-records).
+  - name: OrderProgress
+    description: Progress/status of a grading order or submission, with step breakdown and shipping.
+    key: orderNumber
+  - name: OrderProgressStep
+    description: A single step in an order's progress timeline.
+  - name: PSASpecPopulationModel
+    description: Population report for a PSA spec (SpecID), split into PSA and PSA/DNA summaries.
+    key: SpecID
+  - name: PSASpecPopSummmaryModel
+    description: Population counts by grade for a spec.
+relationships:
+  - from: PublicCertificationModel
+    to: PublicPSACert
+    kind: has_one
+    via: PSACert
+  - from: PublicCertificationModel
+    to: PublicDNACert
+    kind: has_one
+    via: DNACert
+  - from: PublicDNACert
+    to: SubjectDetail
+    kind: has_many
+    via: PrimarySubjects/OtherSubjects
+  - from: CertFileAppendModel
+    to: CertFileAppendPSACert
+    kind: has_one
+    via: PSACert
+  - from: CertFileAppendModel
+    to: CertFileAppendPSAPopulation
+    kind: has_one
+    via: PSAPopulation
+  - from: CertFileAppendModel
+    to: CertFileAppendDNACert
+    kind: has_one
+    via: DNACert
+  - from: OrderProgress
+    to: OrderProgressStep
+    kind: has_many
+    via: orderProgressSteps
+  - from: PSASpecPopulationModel
+    to: PSASpecPopSummmaryModel
+    kind: has_one
+    via: PSAPop/PSADNAPop
+  - from: PublicPSACert
+    to: PSASpecPopulationModel
+    kind: belongs_to
+    via: SpecID

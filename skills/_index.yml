@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/collectors-psa-openapi-original.json
+skills:
+  - file: collectors-verify-certificate.md
+    name: Verify a PSA certificate
+    api: openapi/collectors-psa-openapi-original.json
+    operations: [Cert_GetByCertNumber, Cert_GetImagesByCertNumber]
+  - file: collectors-track-order.md
+    name: Track a PSA grading order
+    api: openapi/collectors-psa-openapi-original.json
+    operations: [Order_GetProgress, Order_GetSubmissionProgress]
+  - file: collectors-population-report.md
+    name: Read a PSA population report
+    api: openapi/collectors-psa-openapi-original.json
+    operations: [Pop_GetPSASpecPopulation]

@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.psacard.com/publicapi/documentation
+spec: openapi/collectors-psa-openapi-original.json
+api: PSA Public API
+authentication:
+  style: bearer-token
+  scheme: apiKey
+  location: header
+  parameter: Authorization
+  format: "bearer <access token>"
+  registration: https://www.psacard.com/publicapi
+  cross_ref: authentication/collectors-authentication.yml
+idempotency:
+  supported: false
+  notes: Read-only API (all operations are GET lookups); no idempotency-key contract is documented.
+pagination:
+  supported: false
+  notes: All operations are single-item lookups keyed by cert/order/submission/spec number.
+error_envelope:
+  fields: [IsValidRequest, ServerMessage]
+  format: custom-envelope
+  cross_ref: errors/collectors-problem-types.yml
+versioning:
+  scheme: single-version
+  current: v1
+  cross_ref: lifecycle/collectors-lifecycle.yml
+rate_limiting:
+  documented: false
+metadata:
+  supported: false
+request_tracing:
+  documented: false

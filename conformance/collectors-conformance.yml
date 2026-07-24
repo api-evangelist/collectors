@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/collectors-psa-openapi-original.json
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: No oauth2 securityScheme; auth is a static Bearer access token (apiKey in header).
+  - id: api-key-auth
+    conforms: true
+    evidence: securityDefinitions declares apiKey Authorization header (Bearer token).
+  - id: openapi-2.0
+    conforms: true
+    evidence: Provider publishes a Swagger 2.0 document at api.psacard.com/publicapi/swagger.json.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a custom {IsValidRequest, ServerMessage} envelope, not application/problem+json.
+  - id: rest
+    conforms: true
+    evidence: Resource-oriented GET lookups over HTTPS returning JSON.
+  - id: pagination
+    conforms: false
+    evidence: All operations are single-item lookups; no collection pagination.

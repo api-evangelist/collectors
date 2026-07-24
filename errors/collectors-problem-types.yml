@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.psacard.com/publicapi/documentation
+spec: openapi/collectors-psa-openapi-original.json
+format: custom-envelope
+notes: >-
+  The PSA Public API does not use RFC 9457 problem+json. Every response is a JSON
+  object; error state is signaled by the HTTP status code plus an envelope carrying
+  IsValidRequest (bool) and ServerMessage (string). A 200 can still indicate "no data
+  found" via ServerMessage while IsValidRequest is true.
+envelope:
+  fields:
+    - name: IsValidRequest
+      type: boolean
+      description: false when the request itself was rejected (e.g. invalid credentials).
+    - name: ServerMessage
+      type: string
+      description: Human-readable status/error text (e.g. "No data found").
+problems:
+  - status: 200
+    title: Success
+    description: Successful request. Data may or may not be returned; check ServerMessage / IsValidRequest.
+  - status: 204
+    title: Empty request data
+    description: The request was missing required data such as a cert number.
+  - status: 400
+    title: Bad request
+    description: Incorrect or invalid request path or malformed query.
+  - status: 401
+    title: Invalid credentials
+    description: Missing or invalid Bearer access token. (Reported by PSA as a 500 with IsValidRequest=false.)
+  - status: 500
+    title: Server error / invalid credentials
+    description: Invalid credentials or an internal server error.

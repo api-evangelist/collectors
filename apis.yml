@@ -1,8 +1,24 @@
 aid: collectors
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/collectors.png
 name: Collectors
-description: 'Collectors is a company surfaced as a portfolio company of d1-capital and added to the API
-  Evangelist network as a stub for enrichment. Sector: marketplace. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Collectors (Collectors Holdings, Inc.) is the parent company behind PSA, PCGS, Beckett, SGC,
+  Card Ladder, and Collectors vault and financial services — the infrastructure powering trust,
+  authentication, grading, vaulting, and marketplace services for trading cards, coins, currency,
+  and memorabilia. Its PSA brand publishes a public developer API for certificate verification,
+  grading order and submission tracking, and population reports, secured with Bearer access tokens.
 url: https://raw.githubusercontent.com/api-evangelist/collectors/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +28,37 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Marketplace
-apis: []
+- Collectibles
+- Authentication
+- Grading
+- Trading Cards
+- Verification
+apis:
+- aid: collectors:collectors-psa-public-api-methods-api
+  name: Collectors PSA Public API Methods API
+  description: >-
+    The PSA Public API Methods API from Collectors — 6 operation(s) for psa public api methods.
+  humanURL: https://www.psacard.com/publicapi/documentation
+  baseURL: https://api.psacard.com/publicapi
+  tags:
+  - PSA Public API Methods
+  properties:
+  - type: OpenAPI
+    url: openapi/collectors-psa-public-api-methods-api-openapi.yml
+  - type: Swagger
+    url: https://api.psacard.com/publicapi/swagger.json
+  - type: Documentation
+    url: https://www.psacard.com/publicapi/documentation
+  - type: APIReference
+    url: https://api.psacard.com/publicapi/swagger
+  - type: Authentication
+    url: authentication/collectors-authentication.yml
+  - type: SignUp
+    url: https://www.psacard.com/publicapi
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +67,46 @@ maintainers:
 common:
 - type: Website
   url: https://www.collectors.com
+- type: Documentation
+  url: https://www.psacard.com/publicapi/documentation
+- type: APIReference
+  url: https://api.psacard.com/publicapi/swagger
+- type: DeveloperPortal
+  url: https://www.psacard.com/publicapi
+- type: SignUp
+  url: https://www.psacard.com/publicapi
+- type: Blog
+  url: https://blog.collectors.com
+- type: TermsOfService
+  url: https://app.collectors.com/collectorsuseragreement
+- type: PrivacyPolicy
+  url: https://app.collectors.com/privacypolicy
+- type: Authentication
+  url: authentication/collectors-authentication.yml
+- type: Conventions
+  url: conventions/collectors-conventions.yml
+- type: ErrorCatalog
+  url: errors/collectors-problem-types.yml
+- type: DataModel
+  url: data-model/collectors-data-model.yml
+- type: Lifecycle
+  url: lifecycle/collectors-lifecycle.yml
+- type: Conformance
+  url: conformance/collectors-conformance.yml
+- type: MCPServer
+  url: mcp/collectors-mcp.yml
+- type: LLMsTxt
+  url: llms/collectors-llms.txt
+- type: Overlay
+  url: overlays/collectors-psa-overlay.yaml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: AgenticAccess
+  url: agentic-access/collectors-agentic-access.yml
+- type: DomainSecurity
+  url: security/collectors-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
