@@ -2,29 +2,34 @@ generated: '2026-07-18'
 method: derived
 status: candidate
 source: openapi/collectors-psa-openapi-original.json
-notes: >-
-  No official hosted MCP server was found for the PSA Public API. This is a candidate
-  tool list derived one-tool-per-operation from the OpenAPI, for exposing PSA cert/order/
-  population lookups to agents. All operations are read-only.
+notes: No official hosted MCP server was found for the PSA Public API. This is a candidate tool list derived
+  one-tool-per-operation from the OpenAPI, for exposing PSA cert/order/ population lookups to agents.
+  All operations are read-only.
 server:
   name: collectors-psa
   transport: http
 tools:
-  - name: get_cert_by_number
-    description: Retrieve PSA certification data by certificate number.
-    source_operation: openapi/collectors-psa-openapi-original.json#Cert_GetByCertNumber
-  - name: get_cert_by_number_for_file_append
-    description: Retrieve file-append cert data by certificate number.
-    source_operation: openapi/collectors-psa-openapi-original.json#Cert_GetByCertNumberForFileAppend
-  - name: get_cert_images
-    description: Retrieve label/item images for a certificate number.
-    source_operation: openapi/collectors-psa-openapi-original.json#Cert_GetImagesByCertNumber
-  - name: get_order_progress
-    description: Get the grading progress/status of an order by order number.
-    source_operation: openapi/collectors-psa-openapi-original.json#Order_GetProgress
-  - name: get_submission_progress
-    description: Get the grading progress/status of a submission by submission number.
-    source_operation: openapi/collectors-psa-openapi-original.json#Order_GetSubmissionProgress
-  - name: get_spec_population
-    description: Get the PSA population report for a spec by SpecID.
-    source_operation: openapi/collectors-psa-openapi-original.json#Pop_GetPSASpecPopulation
+- name: get_cert_by_number
+  description: Retrieve PSA certification data by certificate number.
+  source_operation: openapi/collectors-psa-openapi-original.json#Cert_GetByCertNumber
+- name: get_cert_by_number_for_file_append
+  description: Retrieve file-append cert data by certificate number.
+  source_operation: openapi/collectors-psa-openapi-original.json#Cert_GetByCertNumberForFileAppend
+- name: get_cert_images
+  description: Retrieve label/item images for a certificate number.
+  source_operation: openapi/collectors-psa-openapi-original.json#Cert_GetImagesByCertNumber
+- name: get_order_progress
+  description: Get the grading progress/status of an order by order number.
+  source_operation: openapi/collectors-psa-openapi-original.json#Order_GetProgress
+- name: get_submission_progress
+  description: Get the grading progress/status of a submission by submission number.
+  source_operation: openapi/collectors-psa-openapi-original.json#Order_GetSubmissionProgress
+- name: get_spec_population
+  description: Get the PSA population report for a spec by SpecID.
+  source_operation: openapi/collectors-psa-openapi-original.json#Pop_GetPSASpecPopulation
+deployment:
+  mode: none
+  verified: derived
+  tools: 6
+  checked: '2026-08-12'
+  source: catalog MCP census

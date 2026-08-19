@@ -1,0 +1,619 @@
+{
+  "item": [
+    {
+      "id": "5cb61e6f-be31-4921-b9cd-268429760b65",
+      "name": "PSA Public API Methods",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "34384b5d-2d67-47bb-b3b6-548da54446b5",
+          "name": "Cert Get By Cert Number",
+          "request": {
+            "name": "Cert Get By Cert Number",
+            "description": {},
+            "url": {
+              "path": [
+                "cert",
+                "GetByCertNumber",
+                ":certNumber"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "certNumber",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b8ffce80-8e66-4c0c-b1aa-ce8a9b1dc48c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cert",
+                    "GetByCertNumber",
+                    ":certNumber"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "certNumber",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"PSACert\": {\n    \"CertNumber\": \"string\",\n    \"SpecID\": 6387,\n    \"SpecNumber\": \"string\",\n    \"LabelType\": \"string\",\n    \"ReverseBarCode\": true,\n    \"Year\": \"string\",\n    \"Brand\": \"string\",\n    \"Category\": \"string\",\n    \"CardNumber\": \"string\",\n    \"Subject\": \"string\",\n    \"Variety\": \"string\",\n    \"IsPSADNA\": true,\n    \"IsDualCert\": true,\n    \"GradeDescription\": \"string\",\n    \"CardGrade\": \"string\",\n    \"PrimarySigners\": [\n      \"string\",\n      \"string\"\n    ],\n    \"OtherSigners\": [\n      \"string\",\n      \"string\"\n    ],\n    \"AutographGrade\": \"string\",\n    \"TotalPopulation\": 3506,\n    \"TotalPopulationWithQualifier\": 2569,\n    \"PopulationHigher\": 8969,\n    \"T206PopulationAllBacks\": 4999,\n    \"T206PopulationHigherAllBacks\": 5427,\n    \"ItemStatus\": \"string\"\n  },\n  \"DNACert\": {\n    \"CertNumber\": \"string\",\n    \"ItemDescription\": \"string\",\n    \"Tag\": \"string\",\n    \"PrimarySubjects\": [\n      {\n        \"FirstName\": \"string\",\n        \"LastName\": \"string\",\n        \"IsStamp\": true,\n        \"IsClubhouse\": true,\n        \"IsInThePresence\": false,\n        \"AuthenticationDate\": \"1947-12-12T23:58:57.440Z\",\n        \"AuthenticationLocation\": \"string\",\n        \"Count\": 8482\n      },\n      {\n        \"FirstName\": \"string\",\n        \"LastName\": \"string\",\n        \"IsStamp\": true,\n        \"IsClubhouse\": false,\n        \"IsInThePresence\": true,\n        \"AuthenticationDate\": \"1994-09-20T12:29:54.802Z\",\n        \"AuthenticationLocation\": \"string\",\n        \"Count\": 9301\n      }\n    ],\n    \"OtherSubjects\": [\n      {\n        \"FirstName\": \"string\",\n        \"LastName\": \"string\",\n        \"IsStamp\": false,\n        \"IsClubhouse\": true,\n        \"IsInThePresence\": false,\n        \"AuthenticationDate\": \"1981-06-01T01:24:14.147Z\",\n        \"AuthenticationLocation\": \"string\",\n        \"Count\": 6457\n      },\n      {\n        \"FirstName\": \"string\",\n        \"LastName\": \"string\",\n        \"IsStamp\": false,\n        \"IsClubhouse\": false,\n        \"IsInThePresence\": false,\n        \"AuthenticationDate\": \"2010-09-13T11:46:42.109Z\",\n        \"AuthenticationLocation\": \"string\",\n        \"Count\": 39\n      }\n    ],\n    \"Attributes\": [\n      {\n        \"key\": \"string\",\n        \"value\": \"string\"\n      },\n      {\n        \"key\": \"string\",\n        \"value\": \"string\"\n      }\n    ],\n    \"ItemEra\": \"string\",\n    \"Model\": \"string\",\n    \"Length\": \"string\",\n    \"Weight\": \"string\",\n    \"AuthenticationResult\": \"string\",\n    \"SignatureGrade\": \"string\",\n    \"BaseballGrade\": \"string\",\n    \"Notes\": \"string\",\n    \"DNAItemType\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "df7c8001-0615-4a7b-8bd6-64b1f72b2e94",
+          "name": "Cert Get By Cert Number For File Append",
+          "request": {
+            "name": "Cert Get By Cert Number For File Append",
+            "description": {},
+            "url": {
+              "path": [
+                "cert",
+                "GetByCertNumberForFileAppend",
+                ":certNumber"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "certNumber",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ae037789-8138-40cc-b05b-24edded91797",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cert",
+                    "GetByCertNumberForFileAppend",
+                    ":certNumber"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "certNumber",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"CertificationType\": 3,\n  \"IsHologram\": \"string\",\n  \"IsReverseBarcode\": \"string\",\n  \"PSACert\": {\n    \"CertNumber\": \"string\",\n    \"Year\": \"string\",\n    \"Category\": \"string\",\n    \"SetName\": \"string\",\n    \"CardNumber\": \"string\",\n    \"Subject\": \"string\",\n    \"Variety\": \"string\",\n    \"Grade\": \"string\",\n    \"QualifierCode\": \"string\",\n    \"GradeDescription\": \"string\"\n  },\n  \"PSAPopulation\": {\n    \"TotalPopulation\": \"string\",\n    \"PopulationHigher\": \"string\",\n    \"TotalPopulationWithQualifier\": \"string\",\n    \"T206PopulationAllBacks\": \"string\",\n    \"T206PopulationHigherAllBacks\": \"string\"\n  },\n  \"DNACert\": {\n    \"AuthenticationResult\": \"string\",\n    \"PrimarySubject\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "85c45362-2f99-4823-bdc4-8c53027cf5e3",
+          "name": "Cert Get Images By Cert Number",
+          "request": {
+            "name": "Cert Get Images By Cert Number",
+            "description": {},
+            "url": {
+              "path": [
+                "cert",
+                "GetImagesByCertNumber",
+                ":certNumber"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "certNumber",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "780a4da9-5a7b-439a-80b9-df3c263684c5",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cert",
+                    "GetImagesByCertNumber",
+                    ":certNumber"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "certNumber",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b85304e0-9e4c-4ed0-87db-991200359d82",
+          "name": "Order Get Progress",
+          "request": {
+            "name": "Order Get Progress",
+            "description": {},
+            "url": {
+              "path": [
+                "order",
+                "GetProgress",
+                ":orderNumber"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orderNumber",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9e351c8b-b5b7-46a8-a219-06f34d7320ac",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "order",
+                    "GetProgress",
+                    ":orderNumber"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderNumber",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"orderNumber\": \"string\",\n  \"problemOrder\": true,\n  \"readyForLabelReview\": true,\n  \"gradesReady\": false,\n  \"accountingHold\": false,\n  \"shipped\": true,\n  \"shipTrackingNumber\": \"string\",\n  \"shipCarrier\": \"string\",\n  \"orderProgressSteps\": [\n    {\n      \"step\": 5,\n      \"index\": 1321,\n      \"completed\": false\n    },\n    {\n      \"step\": 0,\n      \"index\": 1520,\n      \"completed\": false\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3185681f-6a15-4690-9b8c-4741af9b796a",
+          "name": "Order Get Submission Progress",
+          "request": {
+            "name": "Order Get Submission Progress",
+            "description": {},
+            "url": {
+              "path": [
+                "order",
+                "GetSubmissionProgress",
+                ":submissionNumber"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "submissionNumber",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f88a0f62-9c03-45a2-a8e7-d6fd05dbd24b",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "order",
+                    "GetSubmissionProgress",
+                    ":submissionNumber"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "submissionNumber",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"orderNumber\": \"string\",\n  \"problemOrder\": true,\n  \"readyForLabelReview\": true,\n  \"gradesReady\": false,\n  \"accountingHold\": true,\n  \"shipped\": true,\n  \"shipTrackingNumber\": \"string\",\n  \"shipCarrier\": \"string\",\n  \"orderProgressSteps\": [\n    {\n      \"step\": 4,\n      \"index\": 613,\n      \"completed\": false\n    },\n    {\n      \"step\": 0,\n      \"index\": 3548,\n      \"completed\": true\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bd6286d0-5480-4341-becf-6805beb03654",
+          "name": "Pop Get PSA Spec Population",
+          "request": {
+            "name": "Pop Get PSA Spec Population",
+            "description": {},
+            "url": {
+              "path": [
+                "pop",
+                "GetPSASpecPopulation",
+                ":specID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "specID",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "866a7ad3-d053-4754-aa12-e13e809fa544",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pop",
+                    "GetPSASpecPopulation",
+                    ":specID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "specID",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"SpecID\": 7668,\n  \"Description\": \"string\",\n  \"PSAPop\": {\n    \"Total\": 9901,\n    \"Auth\": 9464,\n    \"Grade1\": 3090,\n    \"Grade1Q\": 71,\n    \"Grade1_5\": 1468,\n    \"Grade1_5Q\": 7013,\n    \"Grade2\": 405,\n    \"Grade2Q\": 3640,\n    \"Grade2_5\": 184,\n    \"Grade3\": 2607,\n    \"Grade3Q\": 856,\n    \"Grade3_5\": 6663,\n    \"Grade4\": 3670,\n    \"Grade4Q\": 6594,\n    \"Grade4_5\": 4579,\n    \"Grade5\": 2012,\n    \"Grade5Q\": 8228,\n    \"Grade5_5\": 2132,\n    \"Grade6\": 5936,\n    \"Grade6Q\": 2982,\n    \"Grade6_5\": 9820,\n    \"Grade7\": 5881,\n    \"Grade7Q\": 7941,\n    \"Grade7_5\": 9881,\n    \"Grade8\": 7854,\n    \"Grade8Q\": 5684,\n    \"Grade8_5\": 6321,\n    \"Grade9\": 6621,\n    \"Grade9Q\": 426,\n    \"Grade10\": 3018\n  },\n  \"PSADNAPop\": {\n    \"Total\": 6827,\n    \"Auth\": 6809,\n    \"Grade1\": 9010,\n    \"Grade1Q\": 4622,\n    \"Grade1_5\": 7174,\n    \"Grade1_5Q\": 265,\n    \"Grade2\": 6182,\n    \"Grade2Q\": 6995,\n    \"Grade2_5\": 6822,\n    \"Grade3\": 5653,\n    \"Grade3Q\": 9237,\n    \"Grade3_5\": 6300,\n    \"Grade4\": 1243,\n    \"Grade4Q\": 2288,\n    \"Grade4_5\": 4543,\n    \"Grade5\": 2510,\n    \"Grade5Q\": 9230,\n    \"Grade5_5\": 4846,\n    \"Grade6\": 108,\n    \"Grade6Q\": 4803,\n    \"Grade6_5\": 9923,\n    \"Grade7\": 3930,\n    \"Grade7Q\": 8438,\n    \"Grade7_5\": 2203,\n    \"Grade8\": 1156,\n    \"Grade8Q\": 5177,\n    \"Grade8_5\": 5328,\n    \"Grade9\": 6329,\n    \"Grade9Q\": 7062,\n    \"Grade10\": 4871\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/publicapi",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "6cf24b3c-9cdd-493c-9eee-d44013eac1ac",
+    "name": "PSA Public PSA Public API Methods API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This is the Swagger documentation for the PSA Public API. For security, it uses Bearer Authentication. To start testing calls, click Authorize and fill the textbox with `Bearer yourToken`. You can get your token <a href=\"/publicapi/documentation\">here</a>.",
+      "type": "text/plain"
+    }
+  }
+}

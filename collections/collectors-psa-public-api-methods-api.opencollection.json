@@ -1,0 +1,120 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PSA Public PSA Public API Methods API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "PSA Public API Methods",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Cert_GetByCertNumber",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/cert/GetByCertNumber/:certNumber",
+            "params": [
+              {
+                "name": "certNumber",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "Cert_GetByCertNumberForFileAppend",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/cert/GetByCertNumberForFileAppend/:certNumber",
+            "params": [
+              {
+                "name": "certNumber",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "Cert_GetImagesByCertNumber",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/cert/GetImagesByCertNumber/:certNumber",
+            "params": [
+              {
+                "name": "certNumber",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "Order_GetProgress",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/order/GetProgress/:orderNumber",
+            "params": [
+              {
+                "name": "orderNumber",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "Order_GetSubmissionProgress",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/order/GetSubmissionProgress/:submissionNumber",
+            "params": [
+              {
+                "name": "submissionNumber",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "Pop_GetPSASpecPopulation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/pop/GetPSASpecPopulation/:specID",
+            "params": [
+              {
+                "name": "specID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
