@@ -1,7 +1,7 @@
 {
   "provider": "collectors",
   "sources": [
-    "collectors-psa-public-api-methods-api-openapi.yml"
+    "_original/collectors-psa-openapi-original.json"
   ],
   "outputs": [
     "collectors-psa-public-api-methods-api-openapi.yml"
@@ -9,6 +9,13 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "collectors-psa-openapi-original.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "collectors-psa-openapi-original.json: declared missing tag: PSA Public API Methods",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "collectors-psa-public-api-methods-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
