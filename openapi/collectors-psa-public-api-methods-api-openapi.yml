@@ -187,74 +187,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    PSASpecPopulationModel:
-      type: object
-      properties:
-        SpecID:
-          format: int32
-          type: integer
-        Description:
-          type: string
-        PSAPop:
-          $ref: '#/components/schemas/PSASpecPopSummmaryModel'
-        PSADNAPop:
-          $ref: '#/components/schemas/PSASpecPopSummmaryModel'
-    CertFileAppendModel:
-      type: object
-      properties:
-        CertificationType:
-          format: int32
-          enum:
-          - 0
-          - 1
-          - 2
-          - 3
-          - 4
-          type: integer
-        IsHologram:
-          type: string
-        IsReverseBarcode:
-          type: string
-        PSACert:
-          $ref: '#/components/schemas/CertFileAppendPSACert'
-        PSAPopulation:
-          $ref: '#/components/schemas/CertFileAppendPSAPopulation'
-        DNACert:
-          $ref: '#/components/schemas/CertFileAppendDNACert'
-    CertFileAppendPSAPopulation:
-      type: object
-      properties:
-        TotalPopulation:
-          type: string
-        PopulationHigher:
-          type: string
-        TotalPopulationWithQualifier:
-          type: string
-        T206PopulationAllBacks:
-          type: string
-        T206PopulationHigherAllBacks:
-          type: string
-    SubjectDetail:
-      type: object
-      properties:
-        FirstName:
-          type: string
-        LastName:
-          type: string
-        IsStamp:
-          type: boolean
-        IsClubhouse:
-          type: boolean
-        IsInThePresence:
-          type: boolean
-        AuthenticationDate:
-          format: date-time
-          type: string
-        AuthenticationLocation:
-          type: string
-        Count:
-          format: int32
-          type: integer
     PSASpecPopSummmaryModel:
       type: object
       properties:
@@ -348,66 +280,6 @@ components:
         Grade10:
           format: int32
           type: integer
-    OrderProgress:
-      type: object
-      properties:
-        orderNumber:
-          type: string
-        problemOrder:
-          type: boolean
-        readyForLabelReview:
-          type: boolean
-        gradesReady:
-          type: boolean
-        accountingHold:
-          type: boolean
-        shipped:
-          type: boolean
-        shipTrackingNumber:
-          type: string
-        shipCarrier:
-          type: string
-        orderProgressSteps:
-          type: array
-          items:
-            $ref: '#/components/schemas/OrderProgressStep'
-    OrderProgressStep:
-      required:
-      - step
-      type: object
-      properties:
-        index:
-          format: int32
-          type: integer
-        step:
-          format: int32
-          enum:
-          - 0
-          - 1
-          - 2
-          - 3
-          - 4
-          - 5
-          - 6
-          - 7
-          - 8
-          type: integer
-        completed:
-          type: boolean
-    KeyValuePairOfStringAndString:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          type: string
-    PublicCertificationModel:
-      type: object
-      properties:
-        PSACert:
-          $ref: '#/components/schemas/PublicPSACert'
-        DNACert:
-          $ref: '#/components/schemas/PublicDNACert'
     CertFileAppendDNACert:
       type: object
       properties:
@@ -415,28 +287,78 @@ components:
           type: string
         PrimarySubject:
           type: string
-    CertFileAppendPSACert:
+    SubjectDetail:
+      type: object
+      properties:
+        FirstName:
+          type: string
+        LastName:
+          type: string
+        IsStamp:
+          type: boolean
+        IsClubhouse:
+          type: boolean
+        IsInThePresence:
+          type: boolean
+        AuthenticationDate:
+          format: date-time
+          type: string
+        AuthenticationLocation:
+          type: string
+        Count:
+          format: int32
+          type: integer
+    CertFileAppendPSAPopulation:
+      type: object
+      properties:
+        TotalPopulation:
+          type: string
+        PopulationHigher:
+          type: string
+        TotalPopulationWithQualifier:
+          type: string
+        T206PopulationAllBacks:
+          type: string
+        T206PopulationHigherAllBacks:
+          type: string
+    PublicDNACert:
       type: object
       properties:
         CertNumber:
           type: string
-        Year:
+        ItemDescription:
           type: string
-        Category:
+        Tag:
           type: string
-        SetName:
+        PrimarySubjects:
+          type: array
+          items:
+            $ref: '#/components/schemas/SubjectDetail'
+        OtherSubjects:
+          type: array
+          items:
+            $ref: '#/components/schemas/SubjectDetail'
+        Attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/KeyValuePairOfStringAndString'
+        ItemEra:
           type: string
-        CardNumber:
+        Model:
           type: string
-        Subject:
+        Length:
           type: string
-        Variety:
+        Weight:
           type: string
-        Grade:
+        AuthenticationResult:
           type: string
-        QualifierCode:
+        SignatureGrade:
           type: string
-        GradeDescription:
+        BaseballGrade:
+          type: string
+        Notes:
+          type: string
+        DNAItemType:
           type: string
     PublicPSACert:
       type: object
@@ -499,45 +421,123 @@ components:
           type: integer
         ItemStatus:
           type: string
-    PublicDNACert:
+    KeyValuePairOfStringAndString:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    PublicCertificationModel:
+      type: object
+      properties:
+        PSACert:
+          $ref: '#/components/schemas/PublicPSACert'
+        DNACert:
+          $ref: '#/components/schemas/PublicDNACert'
+    CertFileAppendModel:
+      type: object
+      properties:
+        CertificationType:
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          type: integer
+        IsHologram:
+          type: string
+        IsReverseBarcode:
+          type: string
+        PSACert:
+          $ref: '#/components/schemas/CertFileAppendPSACert'
+        PSAPopulation:
+          $ref: '#/components/schemas/CertFileAppendPSAPopulation'
+        DNACert:
+          $ref: '#/components/schemas/CertFileAppendDNACert'
+    OrderProgress:
+      type: object
+      properties:
+        orderNumber:
+          type: string
+        problemOrder:
+          type: boolean
+        readyForLabelReview:
+          type: boolean
+        gradesReady:
+          type: boolean
+        accountingHold:
+          type: boolean
+        shipped:
+          type: boolean
+        shipTrackingNumber:
+          type: string
+        shipCarrier:
+          type: string
+        orderProgressSteps:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderProgressStep'
+    OrderProgressStep:
+      required:
+      - step
+      type: object
+      properties:
+        index:
+          format: int32
+          type: integer
+        step:
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          type: integer
+        completed:
+          type: boolean
+    CertFileAppendPSACert:
       type: object
       properties:
         CertNumber:
           type: string
-        ItemDescription:
+        Year:
           type: string
-        Tag:
+        Category:
           type: string
-        PrimarySubjects:
-          type: array
-          items:
-            $ref: '#/components/schemas/SubjectDetail'
-        OtherSubjects:
-          type: array
-          items:
-            $ref: '#/components/schemas/SubjectDetail'
-        Attributes:
-          type: array
-          items:
-            $ref: '#/components/schemas/KeyValuePairOfStringAndString'
-        ItemEra:
+        SetName:
           type: string
-        Model:
+        CardNumber:
           type: string
-        Length:
+        Subject:
           type: string
-        Weight:
+        Variety:
           type: string
-        AuthenticationResult:
+        Grade:
           type: string
-        SignatureGrade:
+        QualifierCode:
           type: string
-        BaseballGrade:
+        GradeDescription:
           type: string
-        Notes:
+    PSASpecPopulationModel:
+      type: object
+      properties:
+        SpecID:
+          format: int32
+          type: integer
+        Description:
           type: string
-        DNAItemType:
-          type: string
+        PSAPop:
+          $ref: '#/components/schemas/PSASpecPopSummmaryModel'
+        PSADNAPop:
+          $ref: '#/components/schemas/PSASpecPopSummmaryModel'
   securitySchemes:
     Bearer:
       type: apiKey
