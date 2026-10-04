@@ -187,26 +187,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    CertFileAppendPSAPopulation:
-      type: object
-      properties:
-        TotalPopulation:
-          type: string
-        PopulationHigher:
-          type: string
-        TotalPopulationWithQualifier:
-          type: string
-        T206PopulationAllBacks:
-          type: string
-        T206PopulationHigherAllBacks:
-          type: string
-    KeyValuePairOfStringAndString:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          type: string
     OrderProgress:
       type: object
       properties:
@@ -230,29 +210,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/OrderProgressStep'
-    OrderProgressStep:
-      required:
-      - step
-      type: object
-      properties:
-        index:
-          format: int32
-          type: integer
-        step:
-          format: int32
-          enum:
-          - 0
-          - 1
-          - 2
-          - 3
-          - 4
-          - 5
-          - 6
-          - 7
-          - 8
-          type: integer
-        completed:
-          type: boolean
     CertFileAppendDNACert:
       type: object
       properties:
@@ -267,28 +224,18 @@ components:
           $ref: '#/components/schemas/PublicPSACert'
         DNACert:
           $ref: '#/components/schemas/PublicDNACert'
-    CertFileAppendPSACert:
+    CertFileAppendPSAPopulation:
       type: object
       properties:
-        CertNumber:
+        TotalPopulation:
           type: string
-        Year:
+        PopulationHigher:
           type: string
-        Category:
+        TotalPopulationWithQualifier:
           type: string
-        SetName:
+        T206PopulationAllBacks:
           type: string
-        CardNumber:
-          type: string
-        Subject:
-          type: string
-        Variety:
-          type: string
-        Grade:
-          type: string
-        QualifierCode:
-          type: string
-        GradeDescription:
+        T206PopulationHigherAllBacks:
           type: string
     PSASpecPopSummmaryModel:
       type: object
@@ -383,28 +330,6 @@ components:
         Grade10:
           format: int32
           type: integer
-    CertFileAppendModel:
-      type: object
-      properties:
-        CertificationType:
-          format: int32
-          enum:
-          - 0
-          - 1
-          - 2
-          - 3
-          - 4
-          type: integer
-        IsHologram:
-          type: string
-        IsReverseBarcode:
-          type: string
-        PSACert:
-          $ref: '#/components/schemas/CertFileAppendPSACert'
-        PSAPopulation:
-          $ref: '#/components/schemas/CertFileAppendPSAPopulation'
-        DNACert:
-          $ref: '#/components/schemas/CertFileAppendDNACert'
     PublicPSACert:
       type: object
       properties:
@@ -466,6 +391,28 @@ components:
           type: integer
         ItemStatus:
           type: string
+    CertFileAppendModel:
+      type: object
+      properties:
+        CertificationType:
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          type: integer
+        IsHologram:
+          type: string
+        IsReverseBarcode:
+          type: string
+        PSACert:
+          $ref: '#/components/schemas/CertFileAppendPSACert'
+        PSAPopulation:
+          $ref: '#/components/schemas/CertFileAppendPSAPopulation'
+        DNACert:
+          $ref: '#/components/schemas/CertFileAppendDNACert'
     SubjectDetail:
       type: object
       properties:
@@ -487,18 +434,6 @@ components:
         Count:
           format: int32
           type: integer
-    PSASpecPopulationModel:
-      type: object
-      properties:
-        SpecID:
-          format: int32
-          type: integer
-        Description:
-          type: string
-        PSAPop:
-          $ref: '#/components/schemas/PSASpecPopSummmaryModel'
-        PSADNAPop:
-          $ref: '#/components/schemas/PSASpecPopSummmaryModel'
     PublicDNACert:
       type: object
       properties:
@@ -537,6 +472,71 @@ components:
         Notes:
           type: string
         DNAItemType:
+          type: string
+    PSASpecPopulationModel:
+      type: object
+      properties:
+        SpecID:
+          format: int32
+          type: integer
+        Description:
+          type: string
+        PSAPop:
+          $ref: '#/components/schemas/PSASpecPopSummmaryModel'
+        PSADNAPop:
+          $ref: '#/components/schemas/PSASpecPopSummmaryModel'
+    CertFileAppendPSACert:
+      type: object
+      properties:
+        CertNumber:
+          type: string
+        Year:
+          type: string
+        Category:
+          type: string
+        SetName:
+          type: string
+        CardNumber:
+          type: string
+        Subject:
+          type: string
+        Variety:
+          type: string
+        Grade:
+          type: string
+        QualifierCode:
+          type: string
+        GradeDescription:
+          type: string
+    OrderProgressStep:
+      required:
+      - step
+      type: object
+      properties:
+        index:
+          format: int32
+          type: integer
+        step:
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          type: integer
+        completed:
+          type: boolean
+    KeyValuePairOfStringAndString:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
           type: string
   securitySchemes:
     Bearer:
