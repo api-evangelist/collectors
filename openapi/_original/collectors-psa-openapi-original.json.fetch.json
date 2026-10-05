@@ -1,0 +1,12 @@
+{
+ "url": "https://api.psacard.com/publicapi/swagger.json",
+ "requested_url": "https://api.psacard.com/publicapi/swagger.json",
+ "status": 200,
+ "content_type": "application/json; charset=UTF-8",
+ "bytes": 15561,
+ "sha256": "11deff349d85bf73382521f4cd5283a7386b003bacdeaa7f8df8529b8b7b09ea",
+ "fetched_at": "2026-10-04",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "byte-identical",
+ "note": "Re-fetched from the provider by verify-openapi-sources.py; the archived file is byte-identical to what the provider serves."
+}
