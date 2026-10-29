@@ -64,6 +64,114 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Collectors is a company surfaced as a portfolio company of d1-capital and added to the API Evangelist network as a stub for enrichment. Sector: marketplace. This profile is a lead awaiting the enrichment pipeline.
+Collectors (Collectors Holdings, Inc.) is the parent company behind PSA, PCGS, Beckett, SGC, Card Ladder, and Collectors vault and financial services — the infrastructure powering trust, authentication, grading, vaulting, and marketplace services for trading cards, coins, currency, and memorabilia. Its PSA brand publishes a public developer API for certificate verification, grading order and submission tracking, and population reports, secured with Bearer access tokens.
 
-Backed by: d1-capital — https://www.collectors.com
+**Areas:** Company · Marketplace · Collectibles · Authentication · Grading · Trading Cards · Verification
+
+## Collectors on APIs.io
+
+Everything profiled for Collectors is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/collectors/](https://apis.io/providers/collectors/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Collectors PSA Public API Methods API](https://apis.io/apis/collectors/collectors-psa-public-api-methods-api/) — The PSA Public API Methods API from Collectors — 6 operation(s) for psa public api methods.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [collectors-psa](https://apis.io/servers/collectors/collectors-psa/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Collectors Agentic Access](https://apis.io/agentic-access/collectors/collectors-agentic-access/)
+
+#### Collections (1)
+
+Postman and Open Collection request collections.
+
+- [PSA Public PSA Public API Methods API](https://apis.io/collections/collectors/open-collectors-psa-public-api-methods-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Collectors Psa Overlay](https://apis.io/overlays/collectors/collectors-psa-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Collectors Authentication](https://apis.io/security/collectors/collectors-authentication/)
+- [Collectors Domain Security](https://apis.io/security/collectors/collectors-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.collectors.com)
+- [Documentation](https://www.psacard.com/publicapi/documentation)
+- [API reference](https://api.psacard.com/publicapi/swagger)
+- [Sign up](https://www.psacard.com/publicapi)
+- [Blog](https://blog.collectors.com)
+- [Terms of service](https://app.collectors.com/collectorsuseragreement)
+- [Privacy policy](https://app.collectors.com/privacypolicy)
+
+## API Evangelist rating
+
+**Kin Score 33.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 38.6 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 42.3 |
+| Access clarity | 34.2 |
+
+**Agent readiness 24.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.3** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/collectors/](https://apis.io/providers/collectors/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Collectors: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/collectors/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
